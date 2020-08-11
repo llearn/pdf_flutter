@@ -45,6 +45,7 @@ public class PdfViewer implements PlatformView, MethodCallHandler {
     private void loadPdfView() {
         pdfView.fromFile(new File(filePath))
                 .enableSwipe(true) // allows to block changing pages using swipe
+                .enableAnnotationRendering(true)
                 .swipeHorizontal(false)
                 .enableDoubletap(true)
                 .defaultPage(0)
